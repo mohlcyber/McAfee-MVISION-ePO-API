@@ -8,4 +8,4 @@ Edit the Username, Password, Client_ID and directory where event files should be
 
 Other scopes can be defined. Examples:
 
-epo.admin epo.adit.r epo.qery.g epo.resp.ru epo.pevt.r epo.ubp.r epo.sdlr.r epo.dir.a epo.evt.r epo.dxlc.r epo.eagt.r epo.eagt.tr epo.dash.r ens.comn.r ens.comn.vs ens.fw.r ens.fw.vc ens.fw.vr ens.fw.vp ens.fw.vs ens.wp.tr ens.wp.r ens.wp.vs ens.atp.vs ens.atp.r ens.am.r ens.am.tr ens.am.vs ens.am.ve ens.vrs.r ens.vrs.tr mvs.endp.r epo.reg_token mv:m:admin uam:admin openid
+epo.admin epo.adit.r epo.qery.g epo.resp.ru epo.pevt.r epo.ubp.r epo.sdlr.r epo.dir.a epo.evt.r epo.dxlc.r epo.eagt.r epo.eagt.tr epo.dash.r ens.comn.r ens.comn.vs ens.fw.r ens.fw.vc ens.fw.vr ens.fw.vp ens.fw.vs ens.wp.tr ens.wp.r ens.wp.vs ens.atp.vs ens.atp.r ens.am.r ens.am.tr ens.am.vs ens.am.ve ens.vrs.r ens.vrs.tr mvs.endp.r epo.reg_token
