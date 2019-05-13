@@ -1,6 +1,6 @@
 # McAfee-MVISION-ePO-API
 
-This is a simple script to download Threat Events from the McAfee MVISION ePO.
+This are simple scripts (examples) how to download Threat Events from the McAfee MVISION ePO and McAfee MVISION Mobile.
 
 Edit the Username, Password, Client_ID and directory where event files should be stored.
 
