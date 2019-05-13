@@ -61,4 +61,4 @@ if __name__ == '__main__':
     events = mepo.events()
 
     mepo.write(events)
-    print(mepo.nowiso + ': Successfully pulled logs from MVISION ePO')
+    print(mepo.nowiso + ': Successfully pulled logs from MVISION ePO.')
