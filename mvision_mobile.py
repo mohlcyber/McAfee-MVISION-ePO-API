@@ -1,3 +1,4 @@
+import sys
 import os
 import json
 import requests
@@ -9,7 +10,7 @@ class MMOBILE():
     def __init__(self):
         self.auth_url = 'https://iam.mcafee-cloud.com/iam/v1.0/token'
         self.event_url = 'https://ui-mcafee.mvision.mcafee.com/mvisionmobile/fetchThreatEventsList.do'
-        self.user = '' #MVISION Login Username
+        self.user = ''#MVISION Login Username
         self.pw = '' #MVISION Login Password
         # Login to the MVISION EPO console and open a new tab
         # go to https://auth.ui.mcafee.com/support.html to retrieve your client_id
@@ -23,10 +24,10 @@ class MMOBILE():
         now = datetime.utcnow()
         self.nowiso = now.strftime("%Y-%m-%dT%H:%M:%SZ")
 
-        past = now - timedelta(minutes=5)
+        past = now - timedelta(minutes=5) #How often the logs should be pulled
         self.pastiso = past.strftime("%Y-%m-%dT%H:%M:%SZ")
 
-        self.statefile = '/home/mcafee/mvision_logs/script/state.log' #Location of the pointer file
+        self.statefile = '/home/mcafee/mvision_logs/script/state.log' #Directory to where the state should be stored
 
         if os.path.isfile(self.statefile):
              self.state = open(self.statefile, 'r').read()
@@ -47,8 +48,9 @@ class MMOBILE():
         self.headers['Authorization'] = 'Bearer ' + self.token
 
     def events(self):
-        r = requests.get(self.event_url + '?_start={}'.format(self.state), headers=self.headers)
+        r = requests.get(self.event_url + '?_start={}&_sortBy=PersistedTime&_sortOrder=-1'.format(int(self.state)), headers=self.headers)
         evts = r.json()
+        print(evts)
         return(evts)
 
     def write(self, evts):
