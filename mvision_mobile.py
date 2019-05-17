@@ -48,7 +48,7 @@ class MMOBILE():
         self.headers['Authorization'] = 'Bearer ' + self.token
 
     def events(self):
-        r = requests.get(self.event_url + '?_start={}&_sortBy=PersistedTime&_sortOrder=-1'.format(int(self.state)), headers=self.headers)
+        r = requests.get(self.event_url + '?_start={}&_sortBy=PersistedTime&_sortOrder=1'.format(int(self.state)), headers=self.headers)
         evts = r.json()
         print(evts)
         return(evts)
