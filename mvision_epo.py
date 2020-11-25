@@ -8,7 +8,14 @@ class MEPO():
     def __init__(self):
         self.auth_url = 'https://iam.mcafee-cloud.com/iam/v1.0/token'
         self.event_url = 'https://arevents.mvision.mcafee.com/eventservice/api/v1/events'
-
+        #NOTE: Multi-factor authentication enabled accounts can't retrieve access tokens.
+        #Region-based Threat Event API call
+        #    United States	arevents.mvision.mcafee.com
+        #    Singapore	    areventssgp.mvision.mcafee.com
+        #    Frankfurt	    areventsfrk.mvision.mcafee.com
+        #    Sydney	        areventssyd.mvision.mcafee.com
+        #Source: https://docs.mcafee.com/bundle/mvision-epolicy-orchestrator-product-guide/page/GUID-E8D5F121-7544-4302-837D-A68053C95B4D.html
+        
         self.user = '' #MVISION Login Username
         self.pw = '' #MVISION Login Password
         # Login to the MVISION EPO console and open a new tab
