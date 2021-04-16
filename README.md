@@ -3,9 +3,24 @@
 
 This are simple scripts (examples) how to download Threat Events from the McAfee MVISION ePO and McAfee MVISION Mobile.
 
-Edit the Username, Password, Client_ID and directory where event files should be stored.
+```
+usage: python3 mvision_epo_events.py -R <Region> -U <User> -M <Minutes> -L <Limit> -F <File>
 
-<img width="760" alt="Screenshot 2019-05-06 at 14 10 25" src="https://user-images.githubusercontent.com/25227268/57224143-bded3700-7008-11e9-8b48-44038c8e68ef.png">
+McAfee MVISION EPO Events Pull
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --region {US,SI,EU,SY}, -R {US,SI,EU,SY}
+                        McAfee MVISION Tenant Region
+  --user USER, -U USER  McAfee MVISION EPO Username
+  --pw PW, -P PW        McAfee MVISION EPO Password
+  --minutes MINUTES, -M MINUTES
+                        Pull MVISION EPO Events from the last x Minutes
+  --limit LIMIT, -L LIMIT
+                        Maximum Events to retrieve
+  --file {Y,N}, -F {Y,N}
+                        Write output to file
+```
 
 Other scopes can be defined. Examples:
 
