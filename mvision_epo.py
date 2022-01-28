@@ -38,7 +38,7 @@ class MEPO():
         # go to https://auth.ui.mcafee.com/support.html to retrieve your client_id
         self.client_id = '0oae8q9q2y0IZOYUm0h7'
 
-        self.scope = 'epo.evt.r'
+        self.scope = 'epo.evt.r dp.im.r'
 
         headers = {'Accept': 'application/json'}
 
@@ -73,7 +73,7 @@ class MEPO():
         pastiso = past.strftime("%Y-%m-%dT%H:%M:%S.%f")[:-3] + 'Z'
 
         params = {
-            'type': 'threats',  # threats, incidents (dlp), all
+            'type': 'all',  # threats, incidents (dlp), all
             'since': pastiso,
             'until': nowiso,
             'limit': str(args.limit)
