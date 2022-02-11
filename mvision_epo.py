@@ -1,4 +1,4 @@
-# written by mohlcyber - v.0.2 - 16.04.2021
+# written by mohlcyber - v.0.3 - 11.02.2022
 # Script to pull Events from MVISION EPO
 
 import json
@@ -91,11 +91,16 @@ class MEPO():
 
     def write(self, evts):
         i = 0
-        for event in evts['Events']:
-            file = open(str(i) + '.json', 'w')
-            file.write(json.dumps(event))
-            file.close()
-            i += 1
+        collections = ['Threats', 'Incidents']
+
+        for col in collections:
+            if col in evts:
+                for event in evts[col]['Events']:
+                    file = open(col + str(i) + '.json', 'w')
+                    file.write(json.dumps(event))
+                    file.close()
+                    i += 1
+            i = 0
 
     def main(self):
         evt = self.events()
