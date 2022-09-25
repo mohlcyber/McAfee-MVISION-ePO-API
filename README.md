@@ -1,7 +1,7 @@
 # McAfee-MVISION-ePO-API
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
-This are simple scripts (examples) how to download Threat Events from the McAfee MVISION ePO and McAfee MVISION Mobile.
+These are simple scripts (examples) how to download Threat Events from the McAfee MVISION ePO and McAfee MVISION Mobile.
 
 ```
 usage: python3 mvision_epo_events.py -R <Region> -U <User> -M <Minutes> -L <Limit> -F <File>
