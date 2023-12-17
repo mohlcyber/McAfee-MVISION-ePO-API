@@ -23,7 +23,7 @@ class MEPO():
 
         self.auth_url = 'https://iam.mcafee-cloud.com/iam/v1.0/token'
         if args.region == 'US':
-            self.base = 'arevents.mvision.mcafee.com'
+            self.base = 'arevents.manage.trellix.com'
         elif args.region == 'SI':
             self.base = 'areventssgp.mvision.mcafee.com'
         elif args.region == 'EU':
